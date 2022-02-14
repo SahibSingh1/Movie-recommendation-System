@@ -88,7 +88,7 @@ movies['tags']=movies['tags'].apply(stemming)
 from sklearn.feature_extraction.text import CountVectorizer 
 cv=CountVectorizer(max_features=5000,stop_words='english')
 
-vector=cv.fit_transform(movies['tags']).toarray()
+vector=cv.fit_transform(movies['tags'])
 
 
 # now as for measuring the similarity we'll have to calculate the sistance between these vectors in a 5000 dimension
